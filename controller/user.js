@@ -5,7 +5,15 @@ const passport = require("passport")
 const LocalStrategy = require("passport-local").Strategy;
 const cloudinary = require("cloudinary").v2
 
-exports.allUsers = async(req, res) =>{} 
+exports.allUsers = async(req, res) =>{let results = res.paginatedResults
+
+    res.send({
+        count:results.length,
+       results:results,
+    
+
+    })
+} 
 exports.RegUser = async(req, res) =>{
 
     let {username, email, password, password2} = req.body
