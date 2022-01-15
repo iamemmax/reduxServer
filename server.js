@@ -40,6 +40,7 @@ mongoose.connect(process.env.db_connect, {
         
     }else{
         console.log("database connected successfully");
+        console.log("database connected successfully");
 
     }
 })
